@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Inter, Helvetica, Arial, sans-serif;
+  background-color: #000000;
+  color-scheme: dark;
+  color: #ffffff;
+  --color-primary: #3ffa77;
+  --color-secondary: #ff21c7;
+  --color-tertiary: #02fe2c;
+  --color-quaternary: #9b4dff;
+  --card-background: #000000;
+  --highlighted-background: #000000;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.gradient {
+  @apply bg-gradient-to-tl from-[#0294fe] to-[#9b4dff];
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Added styles for canvas container and canvas */
+.canvas-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.canvas-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  background: transparent !important;
+}
+
+/* Styles for video background */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.button {
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.button-active {
+  background-color: #33d81d;
+  color: rgb(255, 0, 200);
+}
+
+.button-inactive {
+  background-color: #ff00d9;
+  color: #f1f1f1;
+}
+
+.button-reset {
+  background-color: #dc2626;
+  color: white;
+}
